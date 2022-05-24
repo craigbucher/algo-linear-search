@@ -3,7 +3,13 @@ for (let i = 1; i <= 1000; i++) {
     arrayToSearchThrough.push(i);
 }
 
-exports.linearSearch = function(valueToFind, arrayToSearchThrough) {
-
+exports.linearSearch = function(target, arr) {
+    for (let i = 0; i < arr.length; i++){	
+        if (arr[i] === target){	
+          return arr.indexOf(arr[i]);	
+        }	
+      }	
+      return undefined;
 };
 
+// console.log(exports.linearSearch(7, arrayToSearchThrough))
